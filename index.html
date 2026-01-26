@@ -1,0 +1,1503 @@
+<html lang="en">
+   <head>
+      <style>
+         body {
+         transition: opacity ease-in 0.2s;
+         }
+         body[unresolved] {
+         opacity: 0;
+         display: block;
+         overflow: hidden;
+         position: relative;
+         }
+      </style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Shivrati Vilas | Luxury Countryside Retreat</title>
+      <meta name="description"
+         content="Experience the serenity of countryside living at Shivrati Vilas. A boutique retreat nestled in nature offering curated experiences and modern comforts.">
+      <meta name="author" content="Shivrati Vilas">
+      <meta name="keywords" content="farmstay, retreat, countryside, nature, boutique hotel, vacation, getaway">
+      <meta property="og:title" content="Shivrati Vilas | Luxury Countryside Retreat">
+      <meta property="og:description"
+         content="Experience the serenity of countryside living at Shivrati Vilas. A boutique retreat nestled in nature.">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="images/drone_view_copy.png">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@mayifarmstay">
+      <meta name="twitter:image" content="images/drone_view_copy.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <link
+         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap"
+         rel="stylesheet">
+      <script src="index.js"></script>
+      <link rel="stylesheet" href="index.css">
+      <style type="text/css">
+         :where([data-sonner-toaster]) {
+         position: fixed;
+         width: var(--width);
+         font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+         --gray1: hsl(0, 0%, 99%);
+         --gray2: hsl(0, 0%, 97.3%);
+         --gray3: hsl(0, 0%, 95.1%);
+         --gray4: hsl(0, 0%, 93%);
+         --gray5: hsl(0, 0%, 90.9%);
+         --gray6: hsl(0, 0%, 88.7%);
+         --gray7: hsl(0, 0%, 85.8%);
+         --gray8: hsl(0, 0%, 78%);
+         --gray9: hsl(0, 0%, 56.1%);
+         --gray10: hsl(0, 0%, 52.3%);
+         --gray11: hsl(0, 0%, 43.5%);
+         --gray12: hsl(0, 0%, 9%);
+         --border-radius: 8px;
+         box-sizing: border-box;
+         padding: 0;
+         margin: 0;
+         list-style: none;
+         outline: none;
+         z-index: 999999999;
+         transition: transform .4s ease
+         }
+         :where([data-sonner-toaster][data-lifted="true"]) {
+         transform: translateY(-10px)
+         }
+         @media (hover: none) and (pointer: coarse) {
+         :where([data-sonner-toaster][data-lifted="true"]) {
+         transform: none
+         }
+         }
+         :where([data-sonner-toaster][data-x-position="right"]) {
+         right: var(--offset-right)
+         }
+         :where([data-sonner-toaster][data-x-position="left"]) {
+         left: var(--offset-left)
+         }
+         :where([data-sonner-toaster][data-x-position="center"]) {
+         left: 50%;
+         transform: translate(-50%)
+         }
+         :where([data-sonner-toaster][data-y-position="top"]) {
+         top: var(--offset-top)
+         }
+         :where([data-sonner-toaster][data-y-position="bottom"]) {
+         bottom: var(--offset-bottom)
+         }
+         :where([data-sonner-toast]) {
+         --y: translateY(100%);
+         --lift-amount: calc(var(--lift) * var(--gap));
+         z-index: var(--z-index);
+         position: absolute;
+         opacity: 0;
+         transform: var(--y);
+         filter: blur(0);
+         touch-action: none;
+         transition: transform .4s, opacity .4s, height .4s, box-shadow .2s;
+         box-sizing: border-box;
+         outline: none;
+         overflow-wrap: anywhere
+         }
+         :where([data-sonner-toast][data-styled="true"]) {
+         padding: 16px;
+         background: var(--normal-bg);
+         border: 1px solid var(--normal-border);
+         color: var(--normal-text);
+         border-radius: var(--border-radius);
+         box-shadow: 0 4px 12px #0000001a;
+         width: var(--width);
+         font-size: 13px;
+         display: flex;
+         align-items: center;
+         gap: 6px
+         }
+         :where([data-sonner-toast]:focus-visible) {
+         box-shadow: 0 4px 12px #0000001a, 0 0 0 2px #0003
+         }
+         :where([data-sonner-toast][data-y-position="top"]) {
+         top: 0;
+         --y: translateY(-100%);
+         --lift: 1;
+         --lift-amount: calc(1 * var(--gap))
+         }
+         :where([data-sonner-toast][data-y-position="bottom"]) {
+         bottom: 0;
+         --y: translateY(100%);
+         --lift: -1;
+         --lift-amount: calc(var(--lift) * var(--gap))
+         }
+         :where([data-sonner-toast]) :where([data-description]) {
+         font-weight: 400;
+         line-height: 1.4;
+         color: inherit
+         }
+         :where([data-sonner-toast]) :where([data-title]) {
+         font-weight: 500;
+         line-height: 1.5;
+         color: inherit
+         }
+         :where([data-sonner-toast]) :where([data-icon]) {
+         display: flex;
+         height: 16px;
+         width: 16px;
+         position: relative;
+         justify-content: flex-start;
+         align-items: center;
+         flex-shrink: 0;
+         margin-left: var(--toast-icon-margin-start, -3px);
+         margin-right: var(--toast-icon-margin-end, 4px)
+         }
+         :where([data-sonner-toast][data-promise="true"]) :where([data-icon])>svg {
+         opacity: 0;
+         transform: scale(.8);
+         transform-origin: center;
+         animation: sonner-fade-in .3s ease forwards
+         }
+         :where([data-sonner-toast]) :where([data-icon])>* {
+         flex-shrink: 0
+         }
+         :where([data-sonner-toast]) :where([data-icon]) svg {
+         margin-left: var(--toast-svg-margin-start, -1px);
+         margin-right: var(--toast-svg-margin-end, 0px)
+         }
+         :where([data-sonner-toast]) :where([data-content]) {
+         display: flex;
+         flex-direction: column;
+         gap: 2px
+         }
+         [data-sonner-toast][data-styled=true] [data-button] {
+         border-radius: 4px;
+         padding-left: 8px;
+         padding-right: 8px;
+         height: 24px;
+         font-size: 12px;
+         color: var(--normal-bg);
+         background: var(--normal-text);
+         margin-left: var(--toast-button-margin-start);
+         margin-right: var(--toast-button-margin-end);
+         border: none;
+         cursor: pointer;
+         outline: none;
+         display: flex;
+         align-items: center;
+         flex-shrink: 0;
+         transition: opacity .4s, box-shadow .2s
+         }
+         :where([data-sonner-toast]) :where([data-button]):focus-visible {
+         box-shadow: 0 0 0 2px #0006
+         }
+         :where([data-sonner-toast]) :where([data-button]):first-of-type {
+         margin-left: var(--toast-button-margin-start);
+         margin-right: var(--toast-button-margin-end)
+         }
+         :where([data-sonner-toast]) :where([data-cancel]) {
+         color: var(--normal-text);
+         background: rgba(0, 0, 0, .08)
+         }
+         :where([data-sonner-toast][data-theme="dark"]) :where([data-cancel]) {
+         background: rgba(255, 255, 255, .3)
+         }
+         :where([data-sonner-toast]) :where([data-close-button]) {
+         position: absolute;
+         left: var(--toast-close-button-start);
+         right: var(--toast-close-button-end);
+         top: 0;
+         height: 20px;
+         width: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 0;
+         color: var(--gray12);
+         border: 1px solid var(--gray4);
+         transform: var(--toast-close-button-transform);
+         border-radius: 50%;
+         cursor: pointer;
+         z-index: 1;
+         transition: opacity .1s, background .2s, border-color .2s
+         }
+         [data-sonner-toast] [data-close-button] {
+         background: var(--gray1)
+         }
+         :where([data-sonner-toast]) :where([data-close-button]):focus-visible {
+         box-shadow: 0 4px 12px #0000001a, 0 0 0 2px #0003
+         }
+         :where([data-sonner-toast]) :where([data-disabled="true"]) {
+         cursor: not-allowed
+         }
+         :where([data-sonner-toast]):hover :where([data-close-button]):hover {
+         background: var(--gray2);
+         border-color: var(--gray5)
+         }
+         :where([data-sonner-toast][data-swiping="true"]):before {
+         content: "";
+         position: absolute;
+         left: -50%;
+         right: -50%;
+         height: 100%;
+         z-index: -1
+         }
+         :where([data-sonner-toast][data-y-position="top"][data-swiping="true"]):before {
+         bottom: 50%;
+         transform: scaleY(3) translateY(50%)
+         }
+         :where([data-sonner-toast][data-y-position="bottom"][data-swiping="true"]):before {
+         top: 50%;
+         transform: scaleY(3) translateY(-50%)
+         }
+         :where([data-sonner-toast][data-swiping="false"][data-removed="true"]):before {
+         content: "";
+         position: absolute;
+         inset: 0;
+         transform: scaleY(2)
+         }
+         :where([data-sonner-toast]):after {
+         content: "";
+         position: absolute;
+         left: 0;
+         height: calc(var(--gap) + 1px);
+         bottom: 100%;
+         width: 100%
+         }
+         :where([data-sonner-toast][data-mounted="true"]) {
+         --y: translateY(0);
+         opacity: 1
+         }
+         :where([data-sonner-toast][data-expanded="false"][data-front="false"]) {
+         --scale: var(--toasts-before) * .05 + 1;
+         --y: translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(calc(-1 * var(--scale)));
+         height: var(--front-toast-height)
+         }
+         :where([data-sonner-toast])>* {
+         transition: opacity .4s
+         }
+         :where([data-sonner-toast][data-expanded="false"][data-front="false"][data-styled="true"])>* {
+         opacity: 0
+         }
+         :where([data-sonner-toast][data-visible="false"]) {
+         opacity: 0;
+         pointer-events: none
+         }
+         :where([data-sonner-toast][data-mounted="true"][data-expanded="true"]) {
+         --y: translateY(calc(var(--lift) * var(--offset)));
+         height: var(--initial-height)
+         }
+         :where([data-sonner-toast][data-removed="true"][data-front="true"][data-swipe-out="false"]) {
+         --y: translateY(calc(var(--lift) * -100%));
+         opacity: 0
+         }
+         :where([data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="true"]) {
+         --y: translateY(calc(var(--lift) * var(--offset) + var(--lift) * -100%));
+         opacity: 0
+         }
+         :where([data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="false"]) {
+         --y: translateY(40%);
+         opacity: 0;
+         transition: transform .5s, opacity .2s
+         }
+         :where([data-sonner-toast][data-removed="true"][data-front="false"]):before {
+         height: calc(var(--initial-height) + 20%)
+         }
+         [data-sonner-toast][data-swiping=true] {
+         transform: var(--y) translateY(var(--swipe-amount-y, 0px)) translate(var(--swipe-amount-x, 0px));
+         transition: none
+         }
+         [data-sonner-toast][data-swiped=true] {
+         user-select: none
+         }
+         [data-sonner-toast][data-swipe-out=true][data-y-position=bottom],
+         [data-sonner-toast][data-swipe-out=true][data-y-position=top] {
+         animation-duration: .2s;
+         animation-timing-function: ease-out;
+         animation-fill-mode: forwards
+         }
+         [data-sonner-toast][data-swipe-out=true][data-swipe-direction=left] {
+         animation-name: swipe-out-left
+         }
+         [data-sonner-toast][data-swipe-out=true][data-swipe-direction=right] {
+         animation-name: swipe-out-right
+         }
+         [data-sonner-toast][data-swipe-out=true][data-swipe-direction=up] {
+         animation-name: swipe-out-up
+         }
+         [data-sonner-toast][data-swipe-out=true][data-swipe-direction=down] {
+         animation-name: swipe-out-down
+         }
+         @keyframes swipe-out-left {
+         0% {
+         transform: var(--y) translate(var(--swipe-amount-x));
+         opacity: 1
+         }
+         to {
+         transform: var(--y) translate(calc(var(--swipe-amount-x) - 100%));
+         opacity: 0
+         }
+         }
+         @keyframes swipe-out-right {
+         0% {
+         transform: var(--y) translate(var(--swipe-amount-x));
+         opacity: 1
+         }
+         to {
+         transform: var(--y) translate(calc(var(--swipe-amount-x) + 100%));
+         opacity: 0
+         }
+         }
+         @keyframes swipe-out-up {
+         0% {
+         transform: var(--y) translateY(var(--swipe-amount-y));
+         opacity: 1
+         }
+         to {
+         transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%));
+         opacity: 0
+         }
+         }
+         @keyframes swipe-out-down {
+         0% {
+         transform: var(--y) translateY(var(--swipe-amount-y));
+         opacity: 1
+         }
+         to {
+         transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%));
+         opacity: 0
+         }
+         }
+         @media (max-width: 600px) {
+         [data-sonner-toaster] {
+         position: fixed;
+         right: var(--mobile-offset-right);
+         left: var(--mobile-offset-left);
+         width: 100%
+         }
+         [data-sonner-toaster][dir=rtl] {
+         left: calc(var(--mobile-offset-left) * -1)
+         }
+         [data-sonner-toaster] [data-sonner-toast] {
+         left: 0;
+         right: 0;
+         width: calc(100% - var(--mobile-offset-left) * 2)
+         }
+         [data-sonner-toaster][data-x-position=left] {
+         left: var(--mobile-offset-left)
+         }
+         [data-sonner-toaster][data-y-position=bottom] {
+         bottom: var(--mobile-offset-bottom)
+         }
+         [data-sonner-toaster][data-y-position=top] {
+         top: var(--mobile-offset-top)
+         }
+         [data-sonner-toaster][data-x-position=center] {
+         left: var(--mobile-offset-left);
+         right: var(--mobile-offset-right);
+         transform: none
+         }
+         }
+         [data-sonner-toaster][data-theme=light] {
+         --normal-bg: #fff;
+         --normal-border: var(--gray4);
+         --normal-text: var(--gray12);
+         --success-bg: hsl(143, 85%, 96%);
+         --success-border: hsl(145, 92%, 91%);
+         --success-text: hsl(140, 100%, 27%);
+         --info-bg: hsl(208, 100%, 97%);
+         --info-border: hsl(221, 91%, 91%);
+         --info-text: hsl(210, 92%, 45%);
+         --warning-bg: hsl(49, 100%, 97%);
+         --warning-border: hsl(49, 91%, 91%);
+         --warning-text: hsl(31, 92%, 45%);
+         --error-bg: hsl(359, 100%, 97%);
+         --error-border: hsl(359, 100%, 94%);
+         --error-text: hsl(360, 100%, 45%)
+         }
+         [data-sonner-toaster][data-theme=light] [data-sonner-toast][data-invert=true] {
+         --normal-bg: #000;
+         --normal-border: hsl(0, 0%, 20%);
+         --normal-text: var(--gray1)
+         }
+         [data-sonner-toaster][data-theme=dark] [data-sonner-toast][data-invert=true] {
+         --normal-bg: #fff;
+         --normal-border: var(--gray3);
+         --normal-text: var(--gray12)
+         }
+         [data-sonner-toaster][data-theme=dark] {
+         --normal-bg: #000;
+         --normal-bg-hover: hsl(0, 0%, 12%);
+         --normal-border: hsl(0, 0%, 20%);
+         --normal-border-hover: hsl(0, 0%, 25%);
+         --normal-text: var(--gray1);
+         --success-bg: hsl(150, 100%, 6%);
+         --success-border: hsl(147, 100%, 12%);
+         --success-text: hsl(150, 86%, 65%);
+         --info-bg: hsl(215, 100%, 6%);
+         --info-border: hsl(223, 100%, 12%);
+         --info-text: hsl(216, 87%, 65%);
+         --warning-bg: hsl(64, 100%, 6%);
+         --warning-border: hsl(60, 100%, 12%);
+         --warning-text: hsl(46, 87%, 65%);
+         --error-bg: hsl(358, 76%, 10%);
+         --error-border: hsl(357, 89%, 16%);
+         --error-text: hsl(358, 100%, 81%)
+         }
+         [data-sonner-toaster][data-theme=dark] [data-sonner-toast] [data-close-button] {
+         background: var(--normal-bg);
+         border-color: var(--normal-border);
+         color: var(--normal-text)
+         }
+         [data-sonner-toaster][data-theme=dark] [data-sonner-toast] [data-close-button]:hover {
+         background: var(--normal-bg-hover);
+         border-color: var(--normal-border-hover)
+         }
+         [data-rich-colors=true][data-sonner-toast][data-type=success],
+         [data-rich-colors=true][data-sonner-toast][data-type=success] [data-close-button] {
+         background: var(--success-bg);
+         border-color: var(--success-border);
+         color: var(--success-text)
+         }
+         [data-rich-colors=true][data-sonner-toast][data-type=info],
+         [data-rich-colors=true][data-sonner-toast][data-type=info] [data-close-button] {
+         background: var(--info-bg);
+         border-color: var(--info-border);
+         color: var(--info-text)
+         }
+         [data-rich-colors=true][data-sonner-toast][data-type=warning],
+         [data-rich-colors=true][data-sonner-toast][data-type=warning] [data-close-button] {
+         background: var(--warning-bg);
+         border-color: var(--warning-border);
+         color: var(--warning-text)
+         }
+         [data-rich-colors=true][data-sonner-toast][data-type=error],
+         [data-rich-colors=true][data-sonner-toast][data-type=error] [data-close-button] {
+         background: var(--error-bg);
+         border-color: var(--error-border);
+         color: var(--error-text)
+         }
+         .sonner-loading-wrapper {
+         --size: 16px;
+         height: var(--size);
+         width: var(--size);
+         position: absolute;
+         inset: 0;
+         z-index: 10
+         }
+         .sonner-loading-wrapper[data-visible=false] {
+         transform-origin: center;
+         animation: sonner-fade-out .2s ease forwards
+         }
+         .sonner-spinner {
+         position: relative;
+         top: 50%;
+         left: 50%;
+         height: var(--size);
+         width: var(--size)
+         }
+         .sonner-loading-bar {
+         animation: sonner-spin 1.2s linear infinite;
+         background: var(--gray11);
+         border-radius: 6px;
+         height: 8%;
+         left: -10%;
+         position: absolute;
+         top: -3.9%;
+         width: 24%
+         }
+         .sonner-loading-bar:nth-child(1) {
+         animation-delay: -1.2s;
+         transform: rotate(.0001deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(2) {
+         animation-delay: -1.1s;
+         transform: rotate(30deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(3) {
+         animation-delay: -1s;
+         transform: rotate(60deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(4) {
+         animation-delay: -.9s;
+         transform: rotate(90deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(5) {
+         animation-delay: -.8s;
+         transform: rotate(120deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(6) {
+         animation-delay: -.7s;
+         transform: rotate(150deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(7) {
+         animation-delay: -.6s;
+         transform: rotate(180deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(8) {
+         animation-delay: -.5s;
+         transform: rotate(210deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(9) {
+         animation-delay: -.4s;
+         transform: rotate(240deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(10) {
+         animation-delay: -.3s;
+         transform: rotate(270deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(11) {
+         animation-delay: -.2s;
+         transform: rotate(300deg) translate(146%)
+         }
+         .sonner-loading-bar:nth-child(12) {
+         animation-delay: -.1s;
+         transform: rotate(330deg) translate(146%)
+         }
+         @keyframes sonner-fade-in {
+         0% {
+         opacity: 0;
+         transform: scale(.8)
+         }
+         to {
+         opacity: 1;
+         transform: scale(1)
+         }
+         }
+         @keyframes sonner-fade-out {
+         0% {
+         opacity: 1;
+         transform: scale(1)
+         }
+         to {
+         opacity: 0;
+         transform: scale(.8)
+         }
+         }
+         @keyframes sonner-spin {
+         0% {
+         opacity: 1
+         }
+         to {
+         opacity: .15
+         }
+         }
+         @media (prefers-reduced-motion) {
+         [data-sonner-toast],
+         [data-sonner-toast]>*,
+         .sonner-loading-bar {
+         transition: none !important;
+         animation: none !important
+         }
+         }
+         .sonner-loader {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         transform-origin: center;
+         transition: opacity .2s, transform .2s
+      </style>
+   </head>
+   <body>
+      <div id="root">
+         <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;">
+            <ol tabindex="-1"
+               class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
+            </ol>
+         </div>
+         <section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text"
+            aria-atomic="false"></section>
+         <main class="min-h-screen">
+            <nav
+               class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-background/95 backdrop-blur-md shadow-sm py-3">
+               <div class="max-w-7xl mx-auto px-6 md:px-12">
+                  <div class="flex items-center justify-between">
+                     <a href="#hero"
+                        class="text-2xl md:text-3xl font-display font-semibold italic tracking-wide transition-colors text-foreground">Shivrati
+                     Himmat Bagh</a>
+                     <div class="hidden md:flex items-center gap-8"><a href="#hero"
+                        class="text-sm font-medium tracking-wider uppercase transition-colors hover:text-primary text-foreground">Home</a><a
+                        href="#about"
+                        class="text-sm font-medium tracking-wider uppercase transition-colors hover:text-primary text-foreground">About</a><a
+                        href="#experiences"
+                        class="text-sm font-medium tracking-wider uppercase transition-colors hover:text-primary text-foreground">Experiences</a><a
+                        href="#gallery"
+                        class="text-sm font-medium tracking-wider uppercase transition-colors hover:text-primary text-foreground">Gallery</a><a
+                        href="#contact"
+                        class="text-sm font-medium tracking-wider uppercase transition-colors hover:text-primary text-foreground">Contact</a><button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-9 rounded-md px-3 bg-primary hover:bg-accent text-primary-foreground font-medium tracking-wide"
+                        fdprocessedid="v3z0sj">Book Now</button></div>
+                     <button id="menuToggle"
+                        class="md:hidden p-2 text-foreground" aria-label="Toggle menu">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
+                           <line x1="4" x2="20" y1="12" y2="12"></line>
+                           <line x1="4" x2="20" y1="6" y2="6"></line>
+                           <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+            </nav>
+            <div id="mobileSidebar" style="
+               position: fixed;
+               top: 0;
+               right : -260px;
+               width: 260px;
+               height: 100%;
+               background: white;
+               z-index: 9999;
+               transition: right 0.3s ease;
+               box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+               " class="md:hidden">
+               <div style="padding: 20px;">
+                  <button id="closeSidebar" type="button" style="font-size:24px; font-weight:bold;">
+                  ×
+                  </button>
+                  <nav style="margin-top:20px; display:flex; flex-direction:column; gap:16px;">
+                     <a href="#hero" onclick="document.getElementById('closeSidebar').click()">Home</a>
+                     <a href="#about" onclick="document.getElementById('closeSidebar').click()">About</a>
+                     <!-- <a href="#experiences" onclick="document.getElementById('closeSidebar').click()">Experiences</a> -->
+                     <a href="#gallery" onclick="document.getElementById('closeSidebar').click()">Gallery</a>
+                     <a href="#contact" onclick="document.getElementById('closeSidebar').click()">Contact</a>
+                  </nav>
+               </div>
+            </div>
+            <div id="sidebarOverlay" style="
+               display:none;
+               position:fixed;
+               inset:0;
+               background:rgba(0,0,0,0.5);
+               z-index:9998;
+               " class="md:hidden"></div>
+            <header id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+               <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style="background-image: linear-gradient(rgba(20, 18, 15, 0.35) 0%, rgba(20, 18, 15, 0.55) 100%), url('images/drone_view_copy.png');">
+               </div>
+               <div class="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 text-center">
+                  <div class="max-w-3xl mx-auto">
+                     <div class="flex items-center justify-center gap-4 mb-8 animate-fade-in"><span
+                        class="h-px w-12 bg-white/40"></span><span
+                        class="text-xs font-body tracking-[0.3em] uppercase text-white/70">Boutique
+                        FarmStay</span><span class="h-px w-12 bg-white/40"></span>
+                     </div>
+                     <h1
+                        class="text-5xl md:text-6xl lg:text-7xl font-display font-medium text-white leading-tight mb-6 animate-fade-up">
+                        Shivrati Vilas
+                     </h1>
+                     <p class="text-lg md:text-xl text-white/85 font-body font-light mb-10 animate-fade-up max-w-2xl mx-auto leading-relaxed"
+                        style="animation-delay: 0.2s;">Where rustic charm meets refined comfort. Escape to our
+                        curated luxury stay and rediscover the art of slow living.
+                     </p>
+                  </div>
+               </div>
+               <div
+                  class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/60 cursor-pointer hover:text-white transition-colors">
+                  <span class="text-xs font-body uppercase tracking-[0.2em] mb-3">Scroll</span>
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-chevron-down w-5 h-5 animate-bounce">
+                     <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+               </div>
+            </header>
+            <section id="about" class="section-padding bg-background">
+               <div class="max-w-6xl mx-auto">
+                  <div class="text-center">
+                     <span
+                        class="text-xs font-body tracking-[0.3em] uppercase text-primary mb-4 block"></span>
+                     <h2 class="text-4xl md:text-5xl font-display font-medium text-foreground mb-6">About Us
+                        <div class="decorative-line"></div>
+                     </h2>
+                     
+                  </div>
+                  <div class="grid lg:grid-cols-2 gap-16 items-center">
+                     <div class="relative">
+                        <div class="aspect-[4/5] overflow-hidden"><img src="images/frontside.png"
+                           alt="Peaceful farmhouse"
+                           class="w-full h-full object-cover transition-all duration-1000 ease-in-out hover:scale-y-110\">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border border-primary/30 -z-10"></div>
+                     </div>
+                     <div class="lg:pl-8">
+                        <h3
+                           class="text-2xl md:text-3xl text-center font-display font-medium text-foreground mb-6 leading-relaxed">
+                           A Sanctuary Where Time Slows Down
+                        </h3>
+                        <p class="text-muted-foreground leading-relaxed mb-6  font-body textjustify">Nestled amidst rolling hills
+                           and verdant landscapes, Shivrati Vilas is more than just a retreat—it's an invitation to
+                           reconnect with nature's rhythm. Our boutique farmstay blends rustic authenticity with
+                           thoughtful modern comforts.
+                        </p>
+                        <p class="text-muted-foreground leading-relaxed  mb-8 font-body textjustify">Every corner of our property
+                           tells a story of tradition, hospitality, and the simple pleasures that make life
+                           beautiful. From farm-fresh breakfasts to starlit evenings by the bonfire, we curate
+                           experiences that linger in memory.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 pt-6 border-t border-border">
+                           <div>
+                              <span class="text-3xl font-display text-primary">10+</span>
+                              <p class="text-sm text-muted-foreground font-body mt-1">Acres of Nature</p>
+                           </div>
+                           <div>
+                              <span class="text-3xl font-display text-primary">500+</span>
+                              <p class="text-sm text-muted-foreground font-body mt-1">Happy Guests</p>
+                           </div>
+                           <div>
+                              <span class="text-3xl font-display text-primary">24/7</span>
+                              <p class="text-sm text-muted-foreground font-body mt-1">Hospitality</p>
+                           </div>
+                           <div>
+                              <span class="text-3xl font-display text-primary">100%</span>
+                              <p class="text-sm text-muted-foreground font-body mt-1">Organic Food</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="py-12 px-6 md:px-12 bg-background border-y border-border">
+               <div class="max-w-5xl mx-auto">
+                  <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                     <div
+                        class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" class="lucide lucide-wifi w-4 h-4 text-primary">
+                           <path d="M12 20h.01"></path>
+                           <path d="M2 8.82a15 15 0 0 1 20 0"></path>
+                           <path d="M5 12.859a10 10 0 0 1 14 0"></path>
+                           <path d="M8.5 16.429a5 5 0 0 1 7 0"></path>
+                        </svg>
+                        <span class="text-sm font-body">Free Wi-Fi</span>
+                     </div>
+                     <div
+                        class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" class="lucide lucide-car w-4 h-4 text-primary">
+                           <path
+                              d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2">
+                           </path>
+                           <circle cx="7" cy="17" r="2"></circle>
+                           <path d="M9 17h6"></path>
+                           <circle cx="17" cy="17" r="2"></circle>
+                        </svg>
+                        <span class="text-sm font-body">Parking</span>
+                     </div>
+                     <div
+                        class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" class="lucide lucide-utensils-crossed w-4 h-4 text-primary">
+                           <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"></path>
+                           <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7">
+                           </path>
+                           <path d="m2.1 21.8 6.4-6.3"></path>
+                           <path d="m19 5-7 7"></path>
+                        </svg>
+                        <span class="text-sm font-body">Organic Meals</span>
+                     </div>
+                     <div
+                        class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" class="lucide lucide-bath w-4 h-4 text-primary">
+                           <path d="M10 4 8 6"></path>
+                           <path d="M17 19v2"></path>
+                           <path d="M2 12h20"></path>
+                           <path d="M7 19v2"></path>
+                           <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5">
+                           </path>
+                        </svg>
+                        <span class="text-sm font-body">Hot Water</span>
+                     </div>
+                     <div
+                        class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" class="lucide lucide-tv w-4 h-4 text-primary">
+                           <rect width="20" height="15" x="2" y="7" rx="2" ry="2"></rect>
+                           <polyline points="17 2 12 7 7 2"></polyline>
+                        </svg>
+                        <span class="text-sm font-body">Smart TV</span>
+                     </div>
+                     <div
+                        class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" class="lucide lucide-coffee w-4 h-4 text-primary">
+                           <path d="M10 2v2"></path>
+                           <path d="M14 2v2"></path>
+                           <path
+                              d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1">
+                           </path>
+                           <path d="M6 2v2"></path>
+                        </svg>
+                        <span class="text-sm font-body">Tea &amp; Coffee</span>
+                     </div>
+                     <div
+                        class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" class="lucide lucide-mountain w-4 h-4 text-primary">
+                           <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+                        </svg>
+                        <span class="text-sm font-body">Mountain View</span>
+                     </div>
+                     <div
+                        class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" class="lucide lucide-sparkles w-4 h-4 text-primary">
+                           <path
+                              d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z">
+                           </path>
+                           <path d="M20 3v4"></path>
+                           <path d="M22 5h-4"></path>
+                           <path d="M4 17v2"></path>
+                           <path d="M5 18H3"></path>
+                        </svg>
+                        <span class="text-sm font-body">Housekeeping</span>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!--
+               <section id="experiences" class="section-padding bg-secondary">
+                   <div class="max-w-6xl mx-auto">
+                       <div class="text-center mb-12"><span
+                               class="text-xs font-body tracking-[0.3em] uppercase text-primary mb-4 block">Our
+                               Experiences</span>
+                           <h2 class="text-4xl md:text-5xl font-display font-medium text-foreground mb-6 italic">Stay &amp;
+                               Explore</h2>
+                           <p class="text-muted-foreground font-body max-w-2xl mx-auto">Would you much rather stay amongst
+                               the maddening crowd or in a tranquil setting with ample fresh air?</p>
+                       </div>
+                       <div class="relative w-full" role="region" aria-roledescription="carousel">
+                           <div id="experienceCarousel" class="overflow-hidden scroll-smooth">
+                               <div class="flex -ml-4" style="transform: translate3d(0px, 0px, 0px);">
+                                   <div role="group" aria-roledescription="slide"
+                                       class="min-w-0 shrink-0 grow-0 basis-full pl-4 md:basis-1/2 lg:basis-1/3"
+                                       style="transform: translate3d(0px, 0px, 0px);">
+                                       <div class="group relative aspect-[3/4] overflow-hidden cursor-pointer"><img
+                                               src="images/RHL04503.PNG" alt="Swimming Pool"
+                                               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                           <div
+                                               class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent">
+                                           </div>
+                                           <div class="absolute bottom-0 left-0 right-0 p-6">
+                                               <h3 class="text-xl md:text-2xl font-display font-medium text-white italic">
+                                                   Swimming Pool</h3>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div role="group" aria-roledescription="slide"
+                                       class="min-w-0 shrink-0 grow-0 basis-full pl-4 md:basis-1/2 lg:basis-1/3"
+                                       style="transform: translate3d(0px, 0px, 0px);">
+                                       <div class="group relative aspect-[3/4] overflow-hidden cursor-pointer"><img
+                                               src="images/RHL04495.JPG" alt="Pool Side Dinner"
+                                               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                           <div
+                                               class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent">
+                                           </div>
+                                           <div class="absolute bottom-0 left-0 right-0 p-6">
+                                               <h3 class="text-xl md:text-2xl font-display font-medium text-white italic">
+                                                   Pool Side Dinner</h3>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div role="group" aria-roledescription="slide"
+                                       class="min-w-0 shrink-0 grow-0 basis-full pl-4 md:basis-1/2 lg:basis-1/3">
+                                       <div class="group relative aspect-[3/4] overflow-hidden cursor-pointer"><img
+                                               src="images/RHL04503.PNG" alt="Lawns"
+                                               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                           <div
+                                               class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent">
+                                           </div>
+                                           <div class="absolute bottom-0 left-0 right-0 p-6">
+                                               <h3 class="text-xl md:text-2xl font-display font-medium text-white italic">
+                                                   Lawns</h3>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div role="group" aria-roledescription="slide"
+                                       class="min-w-0 shrink-0 grow-0 basis-full pl-4 md:basis-1/2 lg:basis-1/3">
+                                       <div class="group relative aspect-[3/4] overflow-hidden cursor-pointer"><img
+                                               src="images/RHL04341.jpg" alt="Family Gathering Spaces"
+                                               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                           <div
+                                               class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent">
+                                           </div>
+                                           <div class="absolute bottom-0 left-0 right-0 p-6">
+                                               <h3 class="text-xl md:text-2xl font-display font-medium text-white italic">
+                                                   Family Gathering Spaces</h3>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div role="group" aria-roledescription="slide"
+                                       class="min-w-0 shrink-0 grow-0 basis-full pl-4 md:basis-1/2 lg:basis-1/3">
+                                       <div class="group relative aspect-[3/4] overflow-hidden cursor-pointer"><img
+                                               src="images/RHL04341.jpg" alt="Party Plot"
+                                               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                           <div
+                                               class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent">
+                                           </div>
+                                           <div class="absolute bottom-0 left-0 right-0 p-6">
+                                               <h3 class="text-xl md:text-2xl font-display font-medium text-white italic">
+                                                   Party Plot</h3>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div role="group" aria-roledescription="slide"
+                                       class="min-w-0 shrink-0 grow-0 basis-full pl-4 md:basis-1/2 lg:basis-1/3">
+                                       <div class="group relative aspect-[3/4] overflow-hidden cursor-pointer"><img
+                                               src="images/RHL04341.jpg" alt="Bonfire Nights"
+                                               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                           <div
+                                               class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent">
+                                           </div>
+                                           <div class="absolute bottom-0 left-0 right-0 p-6">
+                                               <h3 class="text-xl md:text-2xl font-display font-medium text-white italic">
+                                                   Bonfire Nights</h3>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div role="group" aria-roledescription="slide"
+                                       class="min-w-0 shrink-0 grow-0 basis-full pl-4 md:basis-1/2 lg:basis-1/3">
+                                       <div class="group relative aspect-[3/4] overflow-hidden cursor-pointer"><img
+                                               src="images/RHL04341.jpg" alt="Evening High Tea"
+                                               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                           <div
+                                               class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent">
+                                           </div>
+                                           <div class="absolute bottom-0 left-0 right-0 p-6">
+                                               <h3 class="text-xl md:text-2xl font-display font-medium text-white italic">
+                                                   Evening High Tea</h3>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div role="group" aria-roledescription="slide"
+                                       class="min-w-0 shrink-0 grow-0 basis-full pl-4 md:basis-1/2 lg:basis-1/3">
+                                       <div class="group relative aspect-[3/4] overflow-hidden cursor-pointer"><img
+                                               src="images/RHL04341.jpg" alt="Farm Fresh Meals"
+                                               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                           <div
+                                               class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent">
+                                           </div>
+                                           <div class="absolute bottom-0 left-0 right-0 p-6">
+                                               <h3 class="text-xl md:text-2xl font-display font-medium text-white italic">
+                                                   Farm Fresh Meals</h3>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div role="group" aria-roledescription="slide"
+                                       class="min-w-0 shrink-0 grow-0 basis-full pl-4 md:basis-1/2 lg:basis-1/3">
+                                       <div class="group relative aspect-[3/4] overflow-hidden cursor-pointer"><img
+                                               src="images/RHL04341.jpg" alt="Interaction with Animals"
+                                               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                           <div
+                                               class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent">
+                                           </div>
+                                           <div class="absolute bottom-0 left-0 right-0 p-6">
+                                               <h3 class="text-xl md:text-2xl font-display font-medium text-white italic">
+                                                   Interaction with Animals</h3>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div><button id="prevBtn"
+                               class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border hover:text-accent-foreground absolute h-8 w-8 rounded-full top-1/2 -translate-y-1/2 left-2 bg-background/80 hover:bg-background border-border"
+                               fdprocessedid="gak54l"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                   stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left h-4 w-4">
+                                   <path d="m12 19-7-7 7-7"></path>
+                                   <path d="M19 12H5"></path>
+                               </svg><span class="sr-only">Previous slide</span></button>
+                           <button id="nextBtn"
+                               class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border hover:text-accent-foreground absolute h-8 w-8 rounded-full top-1/2 -translate-y-1/2 right-2 bg-background/80 hover:bg-background border-border"
+                               fdprocessedid="y48djl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                   stroke-linecap="round" stroke-linejoin="round"
+                                   class="lucide lucide-arrow-right h-4 w-4">
+                                   <path d="M5 12h14"></path>
+                                   <path d="m12 5 7 7-7 7"></path>
+                               </svg><span class="sr-only">Next slide</span></button>
+                       </div>
+                   </div>
+               </section>
+               -->
+            <section id="gallery" class="section-padding bg-background relative">
+            <div class="max-w-7xl mx-auto">
+               <!-- Heading -->
+               <div class="text-center mb-16">
+                  
+                  <h2 class="text-5xl md:text-6xl font-display font-medium text-foreground mb-6">
+                    <span class="text-xs font-body tracking-[0.3em] uppercase text-primary mb-3 block">Luxury
+                  Experiences</span>
+                  Our Rooms &
+                     Spaces
+                     <p class="text-lg text-muted-foreground font-body max-w-3xl mx-auto mt-2">Discover the elegance
+                     and comfort of Shivrati Vilas
+                  </p>
+                  </h2>
+                  
+                  <div class="w-24 h-1 bg-primary mx-auto rounded"></div>
+               </div>
+               <!-- Carousel wrapper -->
+               <div class="gallery-carousel-container" role="region" aria-roledescription="carousel">
+                  <div id="galleryCarousel" class="overflow-hidden">
+                     <div id="galleryInner" class="gallery-items-wrapper">
+                        <!-- Slide items - Premium Landscape Cards - All 33 Images -->
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/101.png" alt="Room 101" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/201.JPG" alt="Room 201" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/201_left.JPG" alt="Room 201 Left View"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/RHL04308(1).png" alt="Heritage Room" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/RHL04341.JPG" alt="Family Gathering" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/RHL04359.PNG" alt="Premium Suite" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/RHL04529 - Copy.JPG" alt="Guest Bedroom"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/bathroom.JPG" alt="Master Bathroom" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/bathroom2.JPG" alt="Ensuite Bathroom"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/bathroom3.PNG" alt="Guest Bathroom" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/day_frontview.JPG" alt="Day Front View"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/dining_left.JPG" alt="Dining Area Left"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/dinnig_right.PNG" alt="Dining Area Right"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/drone_view_copy.png" alt="Drone Aerial View"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/evenig_tea.JPG" alt="Evening Tea Service"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/front&towel.JPG" alt="Front Towel Display"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/frontright.JPG" alt="Front Right View"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/frontside.PNG" alt="Front Side" class="gallery-image">
+                              </div>
+                             
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/heritage_right.PNG" alt="Heritage Right"
+                                    class="gallery-image">
+                              </div>
+                              
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/heritageroom_left.PNG" alt="Heritage Room Left"
+                                    class="gallery-image">
+                              </div>
+                             
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/lobby1.JPG" alt="Lobby Area" class="gallery-image">
+                              </div>
+                             
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/lobby2.PNG" alt="Lobby Entry" class="gallery-image">
+                              </div>
+                             
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/lobby3.PNG" alt="Lobby Interior" class="gallery-image">
+                              </div>
+                            
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/pool&table.JPG" alt="Pool & Table" class="gallery-image">
+                              </div>
+
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/poolmagzine.PNG" alt="Pool Magazine Area"
+                                    class="gallery-image">
+                              </div>
+                             
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/room1.png" alt="Room 1" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/room4.JPG" alt="Room 4" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/side elevation1.jpg" alt="Side Elevation"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/stairs_right.PNG" alt="Stairs Right" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/stairs_top.JPG" alt="Stairs Top View"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/tv.JPG" alt="Smart TV Setup" class="gallery-image">
+                              </div>
+                             
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/tv2.JPG" alt="TV Room Setup" class="gallery-image">
+                              </div>
+                              
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/varendha1st.PNG" alt="Veranda First Floor"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/RHL04359.PNG" alt="Premium Details" class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                        <div role="group" aria-roledescription="slide" class="gallery-item-wrapper">
+                           <div class="gallery-card">
+                              <div class="gallery-image-container">
+                                 <img src="images/RHL04529 - Copy.JPG" alt="Bedroom Interior"
+                                    class="gallery-image">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Left/Right buttons with premium styling -->
+                  <button id="prevBtnGallery" class="gallery-nav-button prev">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6" />
+                     </svg>
+                  </button>
+                  <button id="nextBtnGallery" class="gallery-nav-button next">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                     </svg>
+                  </button>
+               </div>
+            </div>
+            </section>
+      </div>
+      <section id="contact" class="section-padding bg-secondary">
+      <div class="max-w-6xl mx-auto">
+      <div class="text-center">
+      <h2 class="text-4xl md:text-5xl font-display font-medium text-foreground mb-6">
+        <span
+         class="text-xs font-body tracking-[0.3em] uppercase text-primary mb-4 block">Get In
+      Touch</span>
+        Book Your Stay
+      <div class="decorative-line"></div>
+    </h2>
+      
+      </div>
+      <div class="grid lg:grid-cols-2 gap-16">
+      <div>
+      <h3 class="text-2xl font-display font-medium text-foreground mb-8">Let's Connect</h3>
+      <div class="space-y-6"><a
+         href="https://wa.me/919660401592?text=Hi! I'm interested in booking a stay at Shivrati Vilas."
+         target="_blank" rel="noopener noreferrer"
+         class="flex items-center gap-5 p-5 bg-card border border-border hover:border-primary/40 transition-all group">
+      <div
+         class="w-14 h-14 bg-green-500/10 group-hover:bg-green-500/20 flex items-center justify-center transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" class="lucide lucide-message-circle w-6 h-6 text-green-600">
+      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+      </svg>
+      </div>
+      <div>
+      <p class="text-sm text-muted-foreground font-body">WhatsApp</p>
+      <p class="font-display text-lg text-foreground">+91 9660401592</p>
+      </div>
+      </a><a href="tel:+9660401592"
+         class="flex items-center gap-5 p-5 bg-card border border-border hover:border-primary/40 transition-all group">
+      <div
+         class="w-14 h-14 bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" class="lucide lucide-phone w-6 h-6 text-primary">
+      <path
+         d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+      </path>
+      </svg>
+      </div>
+      <div>
+      <p class="text-sm text-muted-foreground font-body">Call Us</p>
+      <p class="font-display text-lg text-foreground">+91 9660401592</p>
+      </div>
+      </a><a href="https://www.instagram.com/shivrati_vilas" target="_blank" rel="noopener noreferrer"
+         class="flex items-center gap-5 p-5 bg-card border border-border hover:border-primary/40 transition-all group">
+      <div
+         class="w-14 h-14 bg-pink-500/10 group-hover:bg-pink-500/20 flex items-center justify-center transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" class="lucide lucide-instagram w-6 h-6 text-pink-600">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+      </svg>
+      </div>
+      <div>
+      <p class="text-sm text-muted-foreground font-body">Follow Us</p>
+      <p class="font-display text-lg text-foreground">@shivrati_vilas</p>
+      </div>
+      </a>
+      <div class="flex items-center gap-5 p-5 bg-card border border-border">
+      <div class="w-14 h-14 bg-primary/10 flex items-center justify-center"><svg
+         xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" class="lucide lucide-map-pin w-6 h-6 text-primary">
+      <path
+         d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+      </path>
+      <circle cx="12" cy="10" r="3"></circle>
+      </svg></div>
+      <div>
+      <p class="text-sm text-muted-foreground font-body">Location</p>
+      <p class="font-display text-lg text-foreground">Ambamata ghati, Jaisamand Rd, Titrdi,
+      Sector 9, Udaipur, Gordhan Vilas Rural, Rajasthan 313001
+      </p>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="bg-card border border-border p-8 md:p-10">
+      <h3 class="text-2xl font-display font-medium text-foreground mb-8">Send a Message</h3>
+      <form id="contactForm" class="space-y-6"><input name="name"
+         class="flex w-full rounded-md border px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-border focus:border-primary h-12 font-body"
+         placeholder="Your Name" required="" value="" fdprocessedid="p2zrir"><input name="email"
+         type="email"
+         class="flex w-full rounded-md border px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-border focus:border-primary h-12 font-body"
+         placeholder="Email Address" required="" value="" fdprocessedid="2uucuh"><input name="phone"
+         type="tel"
+         class="flex w-full rounded-md border px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-border focus:border-primary h-12 font-body"
+         placeholder="Phone Number" value="" fdprocessedid="8fnbkn"><textarea name="message"
+         class="flex min-h-[80px] w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-background border-border focus:border-primary resize-none font-body"
+         placeholder="Your Message" required="" rows="4"></textarea><button
+         class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 rounded-md px-8 w-full bg-primary hover:bg-accent text-primary-foreground font-body font-medium h-12 tracking-wider uppercase"
+         type="submit" fdprocessedid="i03l5f"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+         height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send w-4 h-4 mr-2">
+      <path
+         d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+      </path>
+      <path d="m21.854 2.147-10.94 10.939"></path>
+      </svg>Send Message</button></form>
+      </div>
+      </div>
+      </div>
+      </section>
+      <footer class="bg-foreground text-background py-16 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <!-- About / Shivrati Vilas -->
+      <div>
+      <h3 class="text-3xl font-display font-medium italic mb-4">Shivrati Vilas</h3>
+      <p class="text-background/60 font-body text-sm leading-relaxed">
+      A boutique countryside retreat where rustic charm meets refined comfort. Escape the ordinary and
+      embrace nature's tranquility.
+      </p>
+      </div>
+      <!-- Quick Links -->
+      <div>
+      <h3 class="text-3xl font-display font-medium italic mb-6">Quick Links</h3>
+      <ul class="space-y-3">
+      <li><a href="#about"
+         class="text-background/60 hover:text-primary transition-colors font-body text-sm">About</a>
+      </li>
+      <li><a href="#experiences"
+         class="text-background/60 hover:text-primary transition-colors font-body text-sm">Experiences</a>
+      </li>
+      <li><a href="#gallery"
+         class="text-background/60 hover:text-primary transition-colors font-body text-sm">Gallery</a>
+      </li>
+      <li><a href="#contact"
+         class="text-background/60 hover:text-primary transition-colors font-body text-sm">Contact</a>
+      </li>
+      </ul>
+      </div>
+      <!-- Location -->
+      <div>
+      <h3 class="text-3xl font-display font-medium italic mb-6">Location</h3>
+      <div class="w-full aspect-[16/9] rounded-lg overflow-hidden">
+      <iframe src="https://www.google.com/maps?q=Shivrati%20Vilas%20Udaipur&output=embed"
+         title="Shivrati Vilas, Udaipur" loading="lazy" class="w-full h-full border-0"
+         allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </div>
+      </div>
+      </div>
+      </div>
+      </footer>
+      <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;">
+      <ol tabindex="-1"
+         class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
+      </ol>
+      </div>
+      </main>
+      </div>
+      
+   </body>
+</html>
